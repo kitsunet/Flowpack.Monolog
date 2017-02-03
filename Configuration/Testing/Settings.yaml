@@ -6,12 +6,12 @@ Flowpack:
         handler:
           streamHandler:
             arguments:
-              - '%FLOW_PATH_DATA%Logs/Security_Testing.log'
+              0: '%FLOW_PATH_DATA%Logs/Security_Testing.log'
       sqlLogger:
         handler:
           streamHandler:
             arguments:
-              - '%FLOW_PATH_DATA%Logs/Query_Testing.log'
+              0: '%FLOW_PATH_DATA%Logs/Query_Testing.log'
 Neos:
   Flow:
     log:
@@ -21,4 +21,4 @@ Neos:
             handler:
               streamHandler:
                 arguments:
-                  - '%FLOW_PATH_DATA%Logs/System_Testing.log'
+                  0: '%FLOW_PATH_DATA%Logs/System_Testing.log'

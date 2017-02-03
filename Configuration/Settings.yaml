@@ -7,12 +7,12 @@ Flowpack:
         className: Monolog\Handler\StreamHandler
         position: 100
         arguments:
-          - '%FLOW_PATH_DATA%Logs/Security.log'
+          0: '%FLOW_PATH_DATA%Logs/Security.log'
       defaultQueryLogHandler:
         className: Monolog\Handler\StreamHandler
         position: 100
         arguments:
-          - '%FLOW_PATH_DATA%Logs/Query.log'
+          0: '%FLOW_PATH_DATA%Logs/Query.log'
     logger:
       default:
         handler:
@@ -20,21 +20,21 @@ Flowpack:
             className: Monolog\Handler\StreamHandler
             position: 100
             arguments:
-              - '%FLOW_PATH_DATA%Logs/Default.log'
+              0: '%FLOW_PATH_DATA%Logs/Default.log'
       securityLogger:
         handler:
           streamHandler:
             className: Monolog\Handler\StreamHandler
             position: 100
             arguments:
-              - '%FLOW_PATH_DATA%Logs/Security.log'
+              0: '%FLOW_PATH_DATA%Logs/Security.log'
       sqlLogger:
         handler:
           streamHandler:
             className: Monolog\Handler\StreamHandler
             position: 100
             arguments:
-              - '%FLOW_PATH_DATA%Logs/Query.log'
+              0: '%FLOW_PATH_DATA%Logs/Query.log'
 Neos:
   Flow:
     log:
@@ -48,7 +48,7 @@ Neos:
                 className: Monolog\Handler\StreamHandler
                 position: 100
                 arguments:
-                  - '%FLOW_PATH_DATA%Logs/System.log'
+                  0: '%FLOW_PATH_DATA%Logs/System.log'
       securityLogger:
         backend: Flowpack\Monolog\FlowBackendFacade
         backendOptions:
