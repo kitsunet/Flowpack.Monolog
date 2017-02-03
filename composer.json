@@ -10,5 +10,5 @@
         "psr-4": {
             "Flowpack\\Monolog\\": "Classes"
         }
-    },
+    }
 }
