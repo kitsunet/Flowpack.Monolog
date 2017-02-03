@@ -2,8 +2,8 @@
 namespace Flowpack\Monolog;
 
 use Monolog\Logger;
-use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Flow\Log\Backend\BackendInterface;
+use Neos\Flow\Annotations as Flow;
+use Neos\Flow\Log\Backend\BackendInterface;
 
 /**
  *

@@ -1,49 +1,43 @@
+
 Flowpack:
   Monolog:
     handler:
-      defaultHandler:
+      defaultHandler: null
       defaultSecurityLogHandler:
-        className: 'Monolog\Handler\StreamHandler'
+        className: Monolog\Handler\StreamHandler
         position: 100
         arguments:
-          0: '%FLOW_PATH_DATA%Logs/Security.log'
+          - '%FLOW_PATH_DATA%Logs/Security.log'
       defaultQueryLogHandler:
-        className: 'Monolog\Handler\StreamHandler'
+        className: Monolog\Handler\StreamHandler
         position: 100
         arguments:
-          0: '%FLOW_PATH_DATA%Logs/Query.log'
-
+          - '%FLOW_PATH_DATA%Logs/Query.log'
     logger:
-      # name of the configuration
       default:
-        # in here should be an array of handlers to configure for this logger configuration.
-        # "position" can be used to define the order of the handlers in case a logger is configured from multiple packages
         handler:
           streamHandler:
-            className: 'Monolog\Handler\StreamHandler'
+            className: Monolog\Handler\StreamHandler
             position: 100
             arguments:
-              0: '%FLOW_PATH_DATA%Logs/Default.log'
+              - '%FLOW_PATH_DATA%Logs/Default.log'
       securityLogger:
         handler:
           streamHandler:
-            className: 'Monolog\Handler\StreamHandler'
+            className: Monolog\Handler\StreamHandler
             position: 100
             arguments:
-              0: '%FLOW_PATH_DATA%Logs/Security.log'
+              - '%FLOW_PATH_DATA%Logs/Security.log'
       sqlLogger:
         handler:
           streamHandler:
-            className: 'Monolog\Handler\StreamHandler'
+            className: Monolog\Handler\StreamHandler
             position: 100
             arguments:
-              0: '%FLOW_PATH_DATA%Logs/Query.log'
-
-
-TYPO3:
+              - '%FLOW_PATH_DATA%Logs/Query.log'
+Neos:
   Flow:
     log:
-      # Settings for TYPO3 Flow's default loggers
       systemLogger:
         backend: Flowpack\Monolog\FlowBackendFacade
         backendOptions:
@@ -51,11 +45,10 @@ TYPO3:
           configuration:
             handler:
               streamHandler:
-                className: 'Monolog\Handler\StreamHandler'
+                className: Monolog\Handler\StreamHandler
                 position: 100
                 arguments:
-                  0: '%FLOW_PATH_DATA%Logs/System.log'
-
+                  - '%FLOW_PATH_DATA%Logs/System.log'
       securityLogger:
         backend: Flowpack\Monolog\FlowBackendFacade
         backendOptions:

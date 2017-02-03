@@ -2,10 +2,10 @@
 namespace Flowpack\Monolog;
 
 use Monolog\Handler\HandlerInterface;
-use TYPO3\Flow\Annotations as Flow;
+use Neos\Flow\Annotations as Flow;
 use Monolog\Logger;
-use TYPO3\Flow\Configuration\Exception\InvalidConfigurationException;
-use TYPO3\Flow\Utility\PositionalArraySorter;
+use Neos\Flow\Configuration\Exception\InvalidConfigurationException;
+use Neos\Utility\PositionalArraySorter;
 
 /**
  * Class LoggerFactory
@@ -141,7 +141,7 @@ class LoggerFactory {
 	/**
 	 * Speed optimized alternative to ReflectionClass::newInstanceArgs()
 	 *
-	 * Duplicated from TYPO3\Flow\Object\ObjectManager to avoid dependency in order to be able to use for SystemLogging.
+	 * Duplicated from Neos\Flow\ObjectManagement\ObjectManager to avoid dependency in order to be able to use for SystemLogging.
 	 *
 	 * @param string $className Name of the class to instantiate
 	 * @param array $arguments Arguments to pass to the constructor

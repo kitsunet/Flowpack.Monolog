@@ -1,3 +1,4 @@
+
 Flowpack:
   Monolog:
     logger:
@@ -5,13 +6,13 @@ Flowpack:
         handler:
           streamHandler:
             arguments:
-              0: '%FLOW_PATH_DATA%Logs/Security_Development.log'
+              - '%FLOW_PATH_DATA%Logs/Security_Development.log'
       sqlLogger:
         handler:
           streamHandler:
             arguments:
-              0: '%FLOW_PATH_DATA%Logs/Query_Development.log'
-TYPO3:
+              - '%FLOW_PATH_DATA%Logs/Query_Development.log'
+Neos:
   Flow:
     log:
       systemLogger:
@@ -20,4 +21,4 @@ TYPO3:
             handler:
               streamHandler:
                 arguments:
-                  0: '%FLOW_PATH_DATA%Logs/System_Development.log'
+                  - '%FLOW_PATH_DATA%Logs/System_Development.log'
