@@ -1,3 +1,4 @@
+
 Flowpack:
   Monolog:
     logger:
@@ -11,7 +12,7 @@ Flowpack:
           streamHandler:
             arguments:
               0: '%FLOW_PATH_DATA%Logs/Query_Development.log'
-TYPO3:
+Neos:
   Flow:
     log:
       systemLogger:

@@ -1,10 +1,10 @@
 <?php
 namespace Flowpack\Monolog;
 
-use TYPO3\Flow\Configuration\ConfigurationManager;
-use TYPO3\Flow\Core\Bootstrap;
-use TYPO3\Flow\Package\Package as BasePackage;
-use TYPO3\Flow\Utility\Files;
+use Neos\Flow\Configuration\ConfigurationManager;
+use Neos\Flow\Core\Bootstrap;
+use Neos\Flow\Package\Package as BasePackage;
+use Neos\Utility\Files;
 
 /**
  *
@@ -27,8 +27,8 @@ class Package extends BasePackage {
 
 		$dispatcher = $bootstrap->getSignalSlotDispatcher();
 
-		$dispatcher->connect('TYPO3\Flow\Core\Booting\Sequence', 'afterInvokeStep', function ($step) use ($bootstrap, $dispatcher) {
-			if ($step->getIdentifier() === 'typo3.flow:configuration') {
+		$dispatcher->connect('Neos\Flow\Core\Booting\Sequence', 'afterInvokeStep', function ($step) use ($bootstrap, $dispatcher) {
+			if ($step->getIdentifier() === 'neos.flow:configuration') {
 				/** @var ConfigurationManager $configurationManager */
 				$configurationManager = $bootstrap->getEarlyInstance(ConfigurationManager::class);
 				$monologFactory = LoggerFactory::getInstance();

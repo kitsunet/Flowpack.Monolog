@@ -3,7 +3,7 @@
     "type": "typo3-flow-package",
     "description": "Monolog integration for Flow",
     "require": {
-        "typo3/flow": "*",
+        "neos/flow": "^4.0",
         "monolog/monolog": "^1.0"
     },
     "autoload": {
